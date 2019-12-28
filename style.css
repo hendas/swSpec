@@ -58,7 +58,6 @@ body>header nav ul li.active a {
 .container {
   display: flex;
   justify-content: center;
-  width: 100vw;
   margin: auto;
   margin-top: 40px;
   display: flex;
@@ -145,10 +144,51 @@ aside ul li a:hover {
 }
 
 footer {
-  background-image: url("img/footer.png");
-  background-color: #000;
-  background-repeat: no-repeat;
   height: 500px;
-  background-size: contain;
-  background-position: 20%;
+  position: relative;
+  background-color: #000;
+}
+
+footer img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-100%);
+}
+
+footer .form {
+  position: absolute;
+  left: 40%;
+  top: 15%;
+  text-transform: uppercase;
+  z-index: 2;
+  min-width: 400px;
+  max-width: 500px;
+  text-align: center;
+  letter-spacing: 8px;
+}
+
+footer .form p {
+  padding: 10px;
+  border: 3px solid #fff;
+  font-size: 40px;
+}
+
+footer .form input {
+  margin-top: 20px;
+  width: 80%;
+  height: 40px;
+  padding: 20px;
+  font-size: 25px;
+  text-align: center;
+  background-color: #313131;
+  border: 3px solid #fff;
+  color: #fff;
+}
+
+footer .form input::placeholder {
+  font-size: 25px;
+  color: #E4E4E4;
+  opacity: .29;
+  text-align: center;
+  line-height: 40px;
 }
