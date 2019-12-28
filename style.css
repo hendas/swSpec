@@ -11,6 +11,8 @@ html {
 
 body {
   background-color: #131313;
+  display: flex;
+  flex-direction: column;
 }
 
 body>header {
@@ -60,7 +62,6 @@ body>header nav ul li.active a {
   justify-content: center;
   margin: auto;
   margin-top: 40px;
-  display: flex;
 }
 
 .container header {
@@ -161,7 +162,6 @@ footer .form {
   top: 15%;
   text-transform: uppercase;
   z-index: 2;
-  min-width: 400px;
   max-width: 500px;
   text-align: center;
   letter-spacing: 8px;
@@ -191,4 +191,157 @@ footer .form input::placeholder {
   opacity: .29;
   text-align: center;
   line-height: 40px;
+}
+
+@media(max-width: 1024px) {
+  .container {
+    width: 90vw;
+  }
+
+  .news>div {
+    flex-direction: column;
+  }
+
+  .news>div main {
+    margin: 0;
+  }
+
+  .news section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .news section article {
+    width: 47%
+  }
+
+  .triple article {
+    width: 30%;
+  }
+
+  .triple article h1 {
+    font-size: 20px;
+  }
+
+  footer img {
+    left: 50%;
+    transform: translateX(-80%);
+  }
+
+  footer .form {
+    left: 45%;
+  }
+}
+
+@media(max-width: 768px) {
+  .container {
+    align-items: center;
+  }
+
+  .container>main {
+    margin: 0;
+  }
+
+  aside {
+    display: none
+  }
+
+  .form {
+    width: 380px;
+  }
+
+  footer .form p {
+    font-size: 25px;
+  }
+}
+
+@media(max-width: 640px) {
+
+  footer {
+    height: 300px;
+  }
+
+  footer .form {
+    top: 9%;
+    width: 300px;
+  }
+
+  footer .form p {
+    font-size: 20px;
+  }
+
+  footer img {
+    height: 300px;
+    top: 0;
+    /* width: 200px; */
+  }
+
+  footer .form input {
+    margin-top: 15px;
+    width: 80%;
+    height: 30px;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    background-color: #313131;
+    border: 3px solid #fff;
+    color: #fff;
+  }
+
+  footer .form input::placeholder {
+    font-size: 15px;
+    color: #E4E4E4;
+    opacity: .29;
+    text-align: center;
+    line-height: 40px;
+  }
+}
+
+@media(max-width: 360px) {
+  nav {
+    display: none
+  }
+
+  .news section {
+    flex-direction: column;
+  }
+
+  .news section article {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .triple div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .triple article {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .triple article:last-child {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  footer img {
+    position: static;
+    transform: none;
+  }
+
+  footer {
+    height: 500px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  footer .form {
+    position: static;
+    transform: none;
+    margin: auto;
+  }
 }
