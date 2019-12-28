@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lato', sans-serif;
+  color: #E4E4E4;
+}
+
+body {
+  background-color: #131313;
+}
+
+body>header {
+  background-color: #000;
+  text-align: center;
+}
+
+body>header nav {
+  background-color: #313131;
+  border-top: 1px solid #FBFBFB;
+}
+
+body>header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+body>header nav ul li {
+
+  border-right: 1px solid #FBFBFB;
+  cursor: pointer;
+}
+
+body>header nav ul li:first-child {
+  border-left: 1px solid #fbfbfb;
+}
+
+body>header nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #707070;
+}
+
+body>header nav ul li:hover a {
+  color: #E4E4E4;
+}
+
+body>header nav ul li.active a {
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+}
+
+.container header {
+  margin: auto;
+  text-align: center;
+  color: #E4E4E4;
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  text-transform: uppercase;
+  padding: 10px;
+  letter-spacing: 2px;
+  color: #E4E4E4;
+  opacity: 0.4;
+}
+
+.container main header {
+  width: 80%;
+}
+
+.container img {
+  display: block;
+  width: 100%;
+
+}
+
+.container>main {
+  margin-right: 40px;
+}
+
+article {
+  margin: 40px 0;
+}
+
+article .data {
+  background-color: #313131;
+  padding: 10px 30px 5px 30px;
+}
+
+article h1 {
+  font-size: 25px;
+}
+
+article p {
+  margin: 5px 0;
+  font-size: 15px;
+  color: #B9B1B1;
+}
+
+.news>div {
+  display: flex;
+}
+
+.news main {
+  margin-right: 40px;
+}
+
+.triple>div {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+aside ul {
+  margin: 40px 0;
+  list-style: none;
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: #707070;
+  line-height: 26px;
+}
+
+aside ul li a:hover {
+  color: #E4E4E4;
+}
+
+.apiPlaceholder {
+  height: 500px;
+  background-color: #313131;
+}
+
+footer {
+  background-image: url("img/footer.png");
+  background-color: #000;
+  background-repeat: no-repeat;
+  height: 500px;
+  background-size: contain;
+  background-position: 20%;
+}
