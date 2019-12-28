@@ -148,6 +148,7 @@ footer {
   height: 500px;
   position: relative;
   background-color: #000;
+  overflow: hidden;
 }
 
 footer img {
