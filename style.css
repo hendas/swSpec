@@ -172,6 +172,9 @@ footer img {
 }
 
 footer .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   left: 40%;
   top: 15%;
@@ -208,12 +211,12 @@ footer .form input::placeholder {
   line-height: 40px;
 }
 
-#myBtn {
+#topBtn {
   display: none;
   position: fixed;
   bottom: 20px;
   right: 30px;
-  z-index: 99;
+  z-index: 9;
   font-size: 18px;
   border: none;
   outline: none;
@@ -224,12 +227,21 @@ footer .form input::placeholder {
   border-radius: 4px;
 }
 
-#myBtn > img {
+#topBtn > img {
   width: 20px;
 }
 
-#myBtn:hover {
+#topBtn:hover {
   background-color: #555;
+}
+
+.saveBtn {
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 20px;
+  padding: 10px 20px;
 }
 
 @media (max-width: 1024px) {

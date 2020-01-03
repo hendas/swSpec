@@ -19,17 +19,17 @@
           <img src="img/bars-solid.svg" alt="bars" />
         </a>
         <ul id="myLinks">
-          <li class="active"><a href="#">news</a></li>
-          <li><a href="#">komiksy</a></li>
-          <li><a href="#">kreskówki</a></li>
-          <li><a href="#">filmy</a></li>
-          <li><a href="#">społeczność</a></li>
+          <li class="active"><a href="#news">najnowsze</a></li>
+          <li><a href="#comics">komiksy</a></li>
+          <li><a href="#cartoons">kreskówki</a></li>
+          <li><a href="#films">filmy</a></li>
+          <li><a href="#community">społeczność</a></li>
         </ul>
       </nav>
     </header>
     <div class="container">
       <main>
-        <section class="news">
+        <section id="news" class="news">
           <header>
             <h2>najnowsze</h2>
           </header>
@@ -89,7 +89,7 @@
             </section>
           </div>
         </section>
-        <section class="triple">
+        <section id="comics" class="triple">
           <header>
             <h2>komiksy</h2>
           </header>
@@ -132,7 +132,7 @@
             </article>
           </div>
         </section>
-        <section class="articles">
+        <section id="cartoons" class="articles">
           <header>
             <h2>kreskówki</h2>
           </header>
@@ -149,7 +149,7 @@
             </div>
           </article>
         </section>
-        <section class="articles">
+        <section id="films" class="articles">
           <header>
             <h2>filmy</h2>
           </header>
@@ -166,7 +166,7 @@
             </div>
           </article>
         </section>
-        <section class="triple">
+        <section id="community" class="triple">
           <header>
             <h2>społeczność</h2>
           </header>
@@ -260,10 +260,11 @@
       <img src="img/footer.png" />
       <div class="form">
         <p>moc cię wzywa zapisz się do newsletteru</p>
-        <input type="text" placeholder="twój adres email" />
+        <input id="email" type="text" placeholder="twój adres email" />
+        <button class="saveBtn" onclick="saveToNewsletter()">Zapisz</button>
       </div>
     </footer>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <button onclick="topFunction()" id="topBtn" title="Go to top">
       <img src="img/arrow-up-solid.svg" alt="arrow up" />
     </button>
     <script src="script.js"></script>

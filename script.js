@@ -1,5 +1,5 @@
 function barsOpen() {
-    var x = document.getElementById("myLinks");
+    const x = document.getElementById("myLinks");
     if (x.style.display === "block") {
         x.style.display = "none";
     } else {
@@ -7,7 +7,7 @@ function barsOpen() {
     }
 }
 
-var mybutton = document.getElementById("myBtn");
+const mybutton = document.getElementById("topBtn");
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
@@ -26,25 +26,24 @@ function topFunction() {
 document.addEventListener("DOMContentLoaded", loadPlanets);
 
 function loadPlanets() {
-    var docApi = document.getElementById("apiPlaceholder");
-    for (var j = 1; j < 8; j++) {
+    const docApi = document.getElementById("apiPlaceholder");
+    for (let j = 1; j < 8; j++) {
         (function (i) {
-            var req = new XMLHttpRequest();
-            var URLhost = "https://swapi.co/api/planets/?page=" + i;
+            const req = new XMLHttpRequest();
+            const URLhost = "https://swapi.co/api/planets/?page=" + i;
             req.open("GET", URLhost, true);
             req.addEventListener("load", function () {
                 if (req.status >= 200 && req.status < 400) {
-                    var response = JSON.parse(req.responseText);
-                    console.log(response);
-                    var planetHead = document.createElement("div");
+                    const response = JSON.parse(req.responseText);
+                    const planetHead = document.createElement("div");
                     docApi.appendChild(planetHead);
                     planetHead.textContent = "Planety - SW " + i;
-                    var planetList = document.createElement("ol");
+                    const planetList = document.createElement("ol");
                     planetHead.appendChild(planetList);
 
-                    for (var k = 0; k < response.results.length; k++) {
+                    for (let k = 0; k < response.results.length; k++) {
                         (function (y) {
-                            var planetIn = document.createElement("li");
+                            const planetIn = document.createElement("li");
                             planetIn.textContent = response.results[y].name;
                             planetList.appendChild(planetIn);
                         })(k);
@@ -57,4 +56,9 @@ function loadPlanets() {
             event.preventDefault();
         })(j);
     }
+}
+
+function saveToNewsletter() {
+    const docInput = document.getElementById("email");
+    alert(`${docInput.value} save to newsletter!`)
 }
