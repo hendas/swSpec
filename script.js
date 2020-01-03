@@ -1,4 +1,5 @@
-function barsOpen() {
+function barsOpen(barIconRef) {
+    barIconRef.classList.toggle("change");
     const x = document.getElementById("myLinks");
     if (x.style.display === "block") {
         x.style.display = "none";
@@ -7,14 +8,14 @@ function barsOpen() {
     }
 }
 
-const mybutton = document.getElementById("topBtn");
+const topButton = document.getElementById("topBtn");
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
+        topButton.style.display = "block";
     } else {
-        mybutton.style.display = "none";
+        topButton.style.display = "none";
     }
 }
 
