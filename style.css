@@ -313,12 +313,16 @@ footer .form input::placeholder {
 @media (max-width: 640px) {
   body > header {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
     align-items: center;
   }
 
   body > header > img {
-    margin-top: 48px;
+    height: 47px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
   }
 
   body > header nav {
@@ -377,6 +381,10 @@ footer .form input::placeholder {
 
   body > header nav ul li:last-child {
     border-bottom: 1px solid #fbfbfb;
+  }
+
+  .container {
+    margin-top: 88px;
   }
 
   .news section {
