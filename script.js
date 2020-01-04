@@ -1,3 +1,13 @@
+const topButton = document.getElementById("topBtn");
+const header = document.getElementById("header");
+const sticky = header.children[1].getBoundingClientRect().top;
+
+document.addEventListener("DOMContentLoaded", loadPlanets);
+window.onscroll = function () {
+    scrollFunction();
+    navbarSticky();
+};
+
 function barsOpen(barIconRef) {
     barIconRef.classList.toggle("change");
     const x = document.getElementById("myLinks");
@@ -8,8 +18,13 @@ function barsOpen(barIconRef) {
     }
 }
 
-const topButton = document.getElementById("topBtn");
-window.onscroll = function () { scrollFunction() };
+function navbarSticky() {
+    if (window.pageYOffset >= sticky) {
+        header.classList.add("sticky")
+    } else {
+        header.classList.remove("sticky");
+    }
+}
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -23,8 +38,6 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-
-document.addEventListener("DOMContentLoaded", loadPlanets);
 
 function loadPlanets() {
     const docApi = document.getElementById("apiPlaceholder");
@@ -61,5 +74,5 @@ function loadPlanets() {
 
 function saveToNewsletter() {
     const docInput = document.getElementById("email");
-    alert(`${docInput.value} save to newsletter!`)
+    alert(`${docInput.value} zapisano do newslettera!`)
 }

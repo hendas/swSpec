@@ -23,6 +23,7 @@ body > header {
 body > header nav {
   background-color: #313131;
   border-top: 1px solid #fbfbfb;
+  z-index: 3;
 }
 
 .bars-icon {
@@ -58,6 +59,16 @@ body > header nav ul li:hover a {
 
 body > header nav ul li.active a {
   color: #fff;
+}
+
+.sticky > nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .container {
+  padding-top: 47px;
 }
 
 .container {
@@ -112,12 +123,22 @@ article p {
   color: #b9b1b1;
 }
 
+.news {
+  padding-top: 47px;
+  margin-top: -47px;
+}
+
 .news > div {
   display: flex;
 }
 
 .news main {
   margin-right: 40px;
+}
+
+.triple {
+  padding-top: 47px;
+  margin-top: -47px;
 }
 
 .triple > div {
@@ -274,6 +295,11 @@ footer .form input::placeholder {
     font-size: 20px;
   }
 
+  .articles {
+    padding-top: 47px;
+    margin-top: -47px;
+  }
+
   footer img {
     left: 50%;
     transform: translateX(-80%);
@@ -321,7 +347,7 @@ footer .form input::placeholder {
     height: 47px;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 44%;
     z-index: 4;
   }
 
@@ -334,7 +360,6 @@ footer .form input::placeholder {
     justify-content: flex-end;
     border: none;
     align-items: center;
-    z-index: 3;
   }
 
   .barsWrapper {
