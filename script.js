@@ -19,8 +19,6 @@ function barsOpen(barIconRef) {
 }
 
 function navbarSticky() {
-    console.log(window.pageYOffset)
-    console.log(sticky)
     if (window.pageYOffset >= sticky) {
         header.classList.add("sticky")
     } else {
